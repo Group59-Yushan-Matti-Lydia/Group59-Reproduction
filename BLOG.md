@@ -17,14 +17,14 @@ The goal of CenterTrack is to detect objects and maintain a consistent id of thi
 Figure 2: Illustration of the CenterTrack framework (taken from [1])
 ## Reproduction
 In terms of the reproducibility project we were tasked with reproducing Table 4 from the paper, specifically the results from the MOT17 dataset. The table shows the results of ablation studies on the proposed framework, in which the two main components of CenterTrack, offset prediction and the use of prior heatmap, are omitted separately and at the same time (detection only). The results are reported in terms of false positive rate (FP), false negative rate (FN), identity switches (IDSW) as well as the multi-object tracking accuracy (MOTA) [3].  
-
-|    MOT17  |
-|     |  MOTA     | FP    | FN    | IDSW    |
-|--------------|-----------|--------|
-|Detection only        | 63.6 %     |  3.5 %    |30.3 %|2.5 %|
-|w/o offset       | 65.8 %     |  4.5 %    |28.4 %|1.3 %|
-|w/o heatmap        |63.9 %     | 3.5 %   |30.3 %|2.3 %|
-|Ours       | 66.1 %  |  4.5 %|28.4 %|1.0 %|
+ 
+|                          MOT17                         |
+|                 |  MOTA     | FP     | FN     | IDSW   |
+|-----------------|-----------|--------|--------|--------|
+|Detection only   | 63.6 %    | 3.5 %  | 30.3 % | 2.5 %  |
+|w/o offset       | 65.8 %    | 4.5 %  | 28.4 % | 1.3 %  |
+|w/o heatmap      | 63.9 %    | 3.5 %  | 30.3 % | 2.3 %  |
+|Ours             | 66.1 %    | 4.5 %  | 28.4 % | 1.0 %  |
 
 Table 1: Results from the paper which the group had to reproduce
 
