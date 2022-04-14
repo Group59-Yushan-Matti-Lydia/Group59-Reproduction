@@ -51,24 +51,15 @@ The script includes:
 
 We use KITTI Tracking to train and evaluate the system as well. Again, we will only use the training set (and create a validation set from it) for developing this project. Note that KITTI Tracking is 2D tracking and is different from KITTI detection (they use the same image, but different train/ val set).
 
-- Download [images](http://www.cvlibs.net/download.php?file=data_tracking_image_2.zip), [annotations](http://www.cvlibs.net/download.php?file=data_tracking_label_2.zip), and [calibration information](http://www.cvlibs.net/download.php?file=data_tracking_calib.zip) (not used in 2D tracking, only if you want to demo 3D detection/ tracking) from [KITTI Tracking website](http://www.cvlibs.net/datasets/kitti/eval_tracking.php) and unzip. Place or symlink the data as below:
+We have packed the dataset preprocessing code as a script.
 
-  ~~~
-  ${CenterTrack_ROOT}
-  |-- data
-  `-- |-- kitti_tracking
-      `-- |-- data_tracking_image_2
-          |   |-- training
-          |   |-- |-- image_02
-          |   |-- |-- |-- 0000
-          |   |-- |-- |-- ...
-          |-- |-- testing
-          |-- label_02
-          |   |-- 0000.txt
-          |   |-- ...
-          `-- data_tracking_calib
-  ~~~
+~~~
+    cd $CenterTrack_ROOT/tools/
+    bash get_KITTI.sh
+~~~
 
+The script includes:
+- Download [images](http://www.cvlibs.net/download.php?file=data_tracking_image_2.zip), [annotations](http://www.cvlibs.net/download.php?file=data_tracking_label_2.zip), and [calibration information](http://www.cvlibs.net/download.php?file=data_tracking_calib.zip) (not used in 2D tracking, only if you want to demo 3D detection/ tracking) from [KITTI Tracking website](http://www.cvlibs.net/datasets/kitti/eval_tracking.php) and unzip.
 - Run `python convert_kitti_to_coco.py` in `tools` to convert the annotation into COCO format. 
 - The resulting data structure should look like:
 
